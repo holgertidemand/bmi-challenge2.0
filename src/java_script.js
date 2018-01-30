@@ -5,7 +5,7 @@ $(document).ready(function () {
             var w = parseFloat($('#weight').val());
             var h = parseFloat($('#height').val());
             var person = new Person({weight: w, height: h});
-            person.calculate_bmi_imperial();
+            person.calculate_bmi("#imperial");
             $('#display_value').html('Your BMI is ' + person.bmiValue);
             $('#display_message').html('and you are '+ person.bmiMessage);
         });
@@ -20,7 +20,7 @@ $(document).ready(function () {
             var w = parseFloat($('#weight').val());
             var h = parseFloat($('#height').val());
             var person = new Person({weight: w, height: h});
-            person.calculate_bmi_metric();
+            person.calculate_bmi("#metric");
             $('#display_value').html('Your BMI is ' + person.bmiValue);
             $('#display_message').html('and you are '+ person.bmiMessage);
         });
@@ -28,11 +28,11 @@ $(document).ready(function () {
 });
 
 function active_system(button, id){
-  if($(button).hasClass('active')){
+ if($(button).hasClass('active')){
       $(button).removeClass('active');
       $(id).addClass('active');
-  } else {
-      $(button).addClass('active');
-      $(id).removeClass('active');
-  }
+   } else {
+       $(button).addClass('active');
+       $(id).removeClass('active');
+   }
 }
