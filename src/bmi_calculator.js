@@ -1,16 +1,18 @@
 function BMICalculator(){
 };
-//var CONSTANT = 703;
 
-// BMICalculator.prototype.imperial_bmi = function(obj) {
-//   var weight = obj.weight;
-//   var height = obj.height;
-//   if (weight > 0 && height > 0) {
-//     var finalBmi = (weight * CONSTANT) / Math.pow(height, 2);
-//     obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
-//     setBMIMessage (obj)
-//   }
-// };
+var IMPERIAL_CONSTANT = 703;
+
+BMICalculator.prototype.imperial_bmi = function(obj) {
+  var weight = obj.weight;
+  var height = obj.height;
+  if (weight > 0 && height > 0) {
+    var finalBmi = (weight * IMPERIAL_CONSTANT) / Math.pow(height, 2);
+    obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
+    setBMIMessage (obj)
+  }
+};
+
 
 BMICalculator.prototype.metric_bmi = function(obj) {
   var weight = obj.weight;
@@ -35,4 +37,7 @@ function setBMIMessage (obj){
   if (obj.bmiValue > 30) {
     obj.bmiMessage = "Obese"
   }
+  if (obj.bmiValue > 185.5) {
+      obj.bmiMessage = "You have higher BMI than JON BROWER MINNOCH"
+      }
 }

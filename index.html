@@ -8,6 +8,10 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
   <body>
+
+    <button id="imperial">Imperial</button>
+    <button id="metric">Metric</button>
+
     <form>
       <input type="text" id="weight" placeholder="Weight">
       <input type="text" id="height" placeholder="Height">
@@ -18,17 +22,34 @@
       <span id="display_message"></span>
 
     </div>
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $('#calculate').click(function () {
-            var w = parseFloat($('#weight').val());
-            var h = parseFloat($('#height').val());
-            var person = new Person({weight: w, height: h});
-            person.calculate_bmi();
-            $('#display_value').html('Your BMI is ' + person.bmiValue);
-            $('#display_message').html('and you are '+ person.bmiMessage);
-          });
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#imperial').click(function(){
+            $('#calculate').click(function () {
+                var w = parseFloat($('#weight').val());
+                var h = parseFloat($('#height').val());
+                var person = new Person({weight: w, height: h});
+                person.calculate_bmi_imperial();
+                $('#display_value').html('Your BMI is ' + person.bmiValue);
+                $('#display_message').html('and you are '+ person.bmiMessage);
+            });
         });
-      </script>
+    });
+
+    $(document).ready(function () {
+        $('#metric').click(function(){
+            $('#calculate').click(function () {
+                var w = parseFloat($('#weight').val());
+                var h = parseFloat($('#height').val());
+                var person = new Person({weight: w, height: h});
+                person.calculate_bmi_metric();
+                $('#display_value').html('Your BMI is ' + person.bmiValue);
+                $('#display_message').html('and you are '+ person.bmiMessage);
+            });
+        });
+    });
+
+
+</script>
   </body>
 </html>
