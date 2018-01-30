@@ -14,12 +14,12 @@ describe("Person", function() {
   });
 
   it("should calculate BMI value", function() {
-    person.calculate_bmi();
+    person.calculate_bmi_metric();
     expect(person.bmiValue).toEqual(26.01)
   });
 
   it("should have a BMI Message", function() {
-    person.calculate_bmi();
+    person.calculate_bmi_metric();
     expect(person.bmiMessage).toEqual("Overweight")
   });
 });

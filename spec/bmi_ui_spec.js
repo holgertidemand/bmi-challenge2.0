@@ -3,6 +3,7 @@ describe('BMI_UI - index.html', function() {
         jasmine.getFixtures().fixturesPath = '.';
         loadFixtures('index.html');
         $.holdReady(false);
+        $('#metric').trigger('click');
         $('#weight').val('90');
         $('#height').val('186');
         $('#calculate').trigger('click');
