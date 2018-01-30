@@ -28,14 +28,16 @@ BMICalculator.prototype.bmi = function(obj, id) {
   var weight = obj.weight;
   var height = obj.height;
   if (weight > 0 && height > 0) {
-      if ($(id).hasClass("active")) {
+      if (id === 'metric') {
           var finalBmi = weight / (height / 100 * height / 100);
           obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
-          setBMIMessage (obj)
-      } else if ($(id).hasClass("active")) {
-          var finalBmi = (weight * IMPERIAL_CONSTANT) / Math.pow(height, 2);
-          obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
-          setBMIMessage (obj)
+          setBMIMessage (obj);
+      } else if (id === 'imperial') {
+          var final_Bmi = (weight * IMPERIAL_CONSTANT) / Math.pow(height, 2);
+          obj.bmiValue =  parseFloat(final_Bmi.toFixed(2));
+          setBMIMessage (obj);
+      } else {
+        alert('FAIL');
       }
   }
 };

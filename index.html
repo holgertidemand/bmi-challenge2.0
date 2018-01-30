@@ -12,7 +12,7 @@
   <body>
 
     <button class="button" id="imperial">Imperial</button>
-    <button class="button active" id="metric">Metric</button>
+    <button class="button" id="metric">Metric</button>
 
     <form>
       <input type="text" id="weight" placeholder="Weight">
@@ -24,42 +24,5 @@
       <span id="display_message"></span>
 
     </div>
-<!-- <script type="text/javascript">
-    $(document).ready(function () {
-        $('#imperial').click(function(){
-              if($(this).hasClass('active')){
-                  $(this).removeClass('active')
-                  $('#metric').addClass('active')
-              } else {
-                  $(this).addClass('active')
-                  $('#metric').removeClass('active')
-              }
-          });
-          $('#calculate').click(function () {
-                var w = parseFloat($('#weight').val());
-                var h = parseFloat($('#height').val());
-                var person = new Person({weight: w, height: h});
-                person.calculate_bmi_imperial();
-                $('#display_value').html('Your BMI is ' + person.bmiValue);
-                $('#display_message').html('and you are '+ person.bmiMessage);
-          });
-    });
-
-
-    $(document).ready(function () {
-        $('#metric').click(function(){
-            $('#calculate').click(function () {
-                var w = parseFloat($('#weight').val());
-                var h = parseFloat($('#height').val());
-                var person = new Person({weight: w, height: h});
-                person.calculate_bmi_metric();
-                $('#display_value').html('Your BMI is ' + person.bmiValue);
-                $('#display_message').html('and you are '+ person.bmiMessage);
-            });
-        });
-    });
-
-
-</script> -->
   </body>
 </html>

@@ -1,29 +1,21 @@
 $(document).ready(function () {
-  $('#imperial').click(function(){
-    active_system(this, '#metric');
-        $('#calculate').click(function () {
-            var w = parseFloat($('#weight').val());
-            var h = parseFloat($('#height').val());
-            var person = new Person({weight: w, height: h});
-            person.calculate_bmi("#imperial");
-            $('#display_value').html('Your BMI is ' + person.bmiValue);
-            $('#display_message').html('and you are '+ person.bmiMessage);
-        });
-    });
-});
-
-
-$(document).ready(function () {
     $('#metric').click(function(){
       active_system(this, '#imperial');
-        $('#calculate').click(function () {
-            var w = parseFloat($('#weight').val());
-            var h = parseFloat($('#height').val());
-            var person = new Person({weight: w, height: h});
-            person.calculate_bmi("#metric");
-            $('#display_value').html('Your BMI is ' + person.bmiValue);
-            $('#display_message').html('and you are '+ person.bmiMessage);
-        });
+    });
+    $('#imperial').click(function(){
+      active_system(this, '#metric');
+    });
+    $('#calculate').click(function () {
+        var w = parseFloat($('#weight').val());
+        var h = parseFloat($('#height').val());
+        var person = new Person({weight: w, height: h});
+        if ($('#metric').hasClass('active')) {
+          person.calculate_bmi("metric");
+        } else {
+          person.calculate_bmi("imperial");
+        }
+        $('#display_value').html('Your BMI is ' + person.bmiValue);
+        $('#display_message').html('and you are '+ person.bmiMessage);
     });
 });
 
