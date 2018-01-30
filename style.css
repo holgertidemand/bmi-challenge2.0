@@ -1,14 +1,31 @@
-.button {
-    float:left;
-    color: #333;
-    width: auto;
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 5px;
+}
+ .button {
+    color: ##66923C;
+
     text-align: center;
     padding: 0 10px;
-    background: #f0f0f0;
+    background: grey;
     line-height: 1.5em;
-    height: auto;
 }
 .button.active {
     background: #ea0000;
     color: #fff;
+}
+
+.container {
+    width: 25%;
+    height: 50%;
+    margin: auto;
+    border: 2px solid #000;
+    margin-top: 250px;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#imperial {
+    
 }
