@@ -1,9 +1,13 @@
 $(document).ready(function () {
     $('#metric').click(function(){
-      active_system(this, '#imperial');
+      active_system(this, '#imperial', '.display');
+      display_message('height', 'Height, cm');
+      display_message('weight', 'Weight, kg');
     });
     $('#imperial').click(function(){
-      active_system(this, '#metric');
+      active_system(this, '#metric', '.display');
+      display_message('height', 'Height, inches');
+      display_message('weight', 'Weight, lbs');
     });
     $('#calculate').click(function () {
         var w = parseFloat($('#weight').val());
@@ -19,12 +23,14 @@ $(document).ready(function () {
     });
 });
 
-function active_system(button, id){
- if($(button).hasClass('active')){
-      $(button).removeClass('active');
-      $(id).addClass('active');
-   } else {
-       $(button).addClass('active');
-       $(id).removeClass('active');
-   }
+function active_system(button, id, class_display){
+ if($(button).not('active')){
+   $(button).addClass('active');
+   $(id).removeClass('active');
+  }
+}
+
+function display_message(id, msg){
+  var bob = document.getElementById(id);
+  bob.placeholder = msg;
 }
