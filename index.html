@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <title>BMI</title>
-      <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-      <script src="src/person.js"></script>
-      <script src="src/bmi_calculator.js"></script>
-      <script src="src/java_script.js"></script>
-      <link rel="stylesheet" href="css/foundation.css"/>
-      <link rel="stylesheet" href="css/style.css"/>
-  </head>
-  <body>
-    <h1 id="bmi">BMI Calculator</h1>
-    <div class="container">
-      <button class="button active" id="imperial">Imperial</button>
-      <button class="button" id="metric">Metric</button>
-      <form class="test">
-        <input class="display active" type="text" id="weight" placeholder="Weight, lbs">
-        <input class="display active" type="text" id="height" placeholder="Height, inches">
-        <input type="button" id="calculate" value="Calculate">
-      </form>
-      <div>
-        <div class="result">
-          <span id="display_value"></span>
-          <span id="display_message"></span>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>BMI</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="src/person.js"></script>
+  <script src="src/bmi_calculator.js"></script>
+  <script src="src/java_script.js"></script>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <h1 id="bmi">BMI Calculator</h1>
+  <div class="container">
+    <button class="button active" id="imperial">Imperial</button>
+    <button class="button" id="metric">Metric</button>
+    <form class="test">
+      <input class="display active" type="text" id="weight" placeholder="Weight, lbs">
+      <input class="display active" type="text" id="height" placeholder="Height, inches">
+      <input type="button" id="calculate" value="Calculate">
+    </form>
+    <div>
+      <div class="result">
+        <span id="display_value"></span>
+        <span id="display_message"></span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
