@@ -56,6 +56,6 @@ function setBMIMessage (obj){
     obj.bmiMessage = "Obese"
   }
   if (obj.bmiValue > 185.5) {
-      obj.bmiMessage = "You have higher BMI than JON BROWER MINNOCH"
+      obj.bmiMessage = 'fatter than <a href="https://sv.wikipedia.org/wiki/Jon_Brower_Minnoch" target="_blank">JON BROWER MINNOCH</a>'
       }
 }
