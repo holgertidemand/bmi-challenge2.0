@@ -10,6 +10,8 @@ body {
   padding: 0 10px;
   background: red;
   line-height: 1.5em;
+  width: 125px;
+  margin-left: 4px;
 }
 
 .button.active {
@@ -31,11 +33,12 @@ body {
 #calculate {
   border-radius: 5px;
   font-style: italic;
+  width: 268px;
 }
 
 #bmi {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
   font-style: italic;
 }
 
