@@ -13,6 +13,17 @@
 </head>
 
 <body>
+
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'it,pl,sv'
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <h1 id="bmi">BMI Calculator</h1>
   <div class="container">
     <button class="button active" id="imperial">Imperial</button>
@@ -29,6 +40,7 @@
       </div>
     </div>
   </div>
+
 </body>
 
 </html>

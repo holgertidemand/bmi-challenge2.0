@@ -48,3 +48,8 @@ body {
 ::-webkit-input-placeholder {
   font-style: italic;
 }
+
+#google_translate_element{
+  width: 200px;
+  margin: 5px 10px;
+}
